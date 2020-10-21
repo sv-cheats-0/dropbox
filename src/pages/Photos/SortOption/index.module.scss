@@ -1,0 +1,23 @@
+.sortOption {
+  margin-right: 15px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  background: none;
+  color: #444b63;
+  font-weight: bold;
+  cursor: pointer;
+
+  &.active,
+  &:hover,
+  &:focus {
+    outline: none;
+    background: #444b63;
+    color: #fff;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

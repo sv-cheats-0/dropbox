@@ -1,12 +1,6 @@
 import * as actionTypes from './constants'
 import * as types from './types'
 
-const initialState: types.RootState = {
-  loading: false,
-  error: '',
-  photos: [],
-}
-
 const ACTION_HANDLERS = {
   [actionTypes.FETCH_IMAGES_REQUEST]: (state: types.RootState) => {
     return {
@@ -36,7 +30,7 @@ const ACTION_HANDLERS = {
   },
 }
 
-const appReducer = (state = initialState, action: any) => {
+const appReducer = (state, action: any) => {
   const handler = ACTION_HANDLERS[action.type]
 
   return handler ? handler(state, action) : state
