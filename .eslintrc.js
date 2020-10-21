@@ -75,6 +75,7 @@ module.exports = {
     "react/jsx-filename-extension": ["off", {
       "extensions": [".jsx", ".tsx"]
     }],
+    "react/jsx-props-no-spreading": [0],
     "jsx-quotes": ["error", "prefer-single"],
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",

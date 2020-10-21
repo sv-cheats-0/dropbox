@@ -1,0 +1,19 @@
+.navigation {
+  color: #989c9c;
+  font-size: 16px;
+}
+
+.navItem {
+  display: block;
+  padding: 10px 5px;
+  color: #989c9c;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.active {
+  color: #fff;
+}
