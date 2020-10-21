@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import rootStore from './store/createStore'
 import routes from './routes'
 import PageLayout from './layout/PageLayout'
 import Sidebar from './layout/Sidebar'
@@ -16,18 +18,20 @@ const renderRoutes = () => (
 
 const AppContainer: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Sidebar />
-      <PageLayout>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Switch>
-            <Redirect exact from='/' to='/photos' />
-            {renderRoutes()}
-            <Route>Page not found</Route>
-          </Switch>
-        </Suspense>
-      </PageLayout>
-    </BrowserRouter>
+    <Provider store={rootStore}>
+      <BrowserRouter>
+        <Sidebar />
+        <PageLayout>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+              <Redirect exact from='/' to='/photos' />
+              {renderRoutes()}
+              <Route>Page not found</Route>
+            </Switch>
+          </Suspense>
+        </PageLayout>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
