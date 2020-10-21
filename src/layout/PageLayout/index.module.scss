@@ -1,0 +1,32 @@
+.contentWrap {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.searchInput {
+  padding: 10px;
+  border: 1px solid transparent;
+  font-size: 16px;
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border: 1px solid #00bfff;
+    border-radius: 3px;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 16px;
+  }
+}
+
+.currentUser {
+  padding: 10px;
+  font-size: 16px;
+}
