@@ -1,3 +1,36 @@
-.totalSize {
+.memoryUsed {
+  position: absolute;
+  bottom: 150px;
+  padding: 10px;
+  width: 90%;
 
+  &-size {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &-button {
+    width: 21px;
+    height: 21px;
+    float: right;
+    border: 1px solid #fff;
+    border-radius: 11px;
+    box-shadow: none;
+    background: none;
+    color: aqua;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &-track {
+    margin-top: 10px;
+    height: 3px;
+    background: rgba(0, 0, 0, .6s);
+  }
+
+  &-progress {
+    height: 100%;
+    background: aqua;
+  }
 }
