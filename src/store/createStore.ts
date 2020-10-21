@@ -1,5 +1,6 @@
-import { applyMiddleware, compose, createStore, Store } from 'redux'
+import { applyMiddleware, compose, createStore } from 'redux'
 import thunk from 'redux-thunk'
+import initialState from './initialState'
 import makeRootReducer from './rootReducer'
 import activateStoreHMR from './storeHMR'
 
@@ -9,7 +10,7 @@ declare global {
   }
 }
 
-const rootStore = (initialState: any = {}) => {
+const rootStore = (): any => {
   // ======================================================
   // Middleware Configuration
   // ======================================================
@@ -26,7 +27,7 @@ const rootStore = (initialState: any = {}) => {
   // ======================================================
   // Store Instantiation and HMR Setup
   // ======================================================
-  const store: Store = createStore(
+  const store = createStore(
     makeRootReducer(),
     initialState,
     compose(

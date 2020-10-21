@@ -1,0 +1,25 @@
+.imageCard {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px 25px 5px;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 255, .1);
+  }
+
+  &-img {
+    width: 200px;
+    height: 150px;
+  }
+
+  &-name {
+    padding: 10px 0;
+  }
+
+  &-size {
+    color: #989c9c;
+  }
+}
