@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './index.module.scss'
 import Navigation from './Navigation'
-import TotalSize from './TotalSize'
+import MemoryUsed from './MemoryUsed'
 
 const Sidebar: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Sidebar: React.FC = () => {
         </a>
       </div>
       <Navigation />
-      <TotalSize />
+      <MemoryUsed />
       <button type='button' className={s.upgradeButton}>
         Upgrade account
       </button>
