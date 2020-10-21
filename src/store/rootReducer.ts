@@ -1,9 +1,8 @@
-import { combineReducers, Reducer } from 'redux'
+import { Reducer } from 'redux'
+import photosReducer from '../ducks/photos'
 
 export const makeRootReducer = (): Reducer => {
-  return combineReducers({
-
-  })
+  return photosReducer
 }
 
 export default makeRootReducer

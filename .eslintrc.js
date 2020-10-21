@@ -23,7 +23,7 @@ module.exports = {
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
       }
     }
   },
@@ -72,6 +72,8 @@ module.exports = {
     "@typescript-eslint/prefer-interface": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-use-before-define": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "react/jsx-filename-extension": ["off", {
       "extensions": [".jsx", ".tsx"]
     }],
